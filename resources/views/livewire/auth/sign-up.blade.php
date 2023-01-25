@@ -8,7 +8,7 @@
                       <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                       <p class="text-lead text-white">
                           {{ __('Use these awesome forms to login or create new account in your
-                          project for free.') }}
+                                                                              project for free.') }}
                       </p>
                   </div>
               </div>
@@ -16,7 +16,7 @@
       </div>
       <div class="container">
           <div class="row mt-lg-n10 mt-md-n11 mt-n10">
-              <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+              <div class="col-xl-6 col-lg-6 col-md-7 mx-auto">
                   <div class="card z-index-0">
                       <div class="card-header text-center pt-4">
                           <h5>{{ __('Register with') }}</h5>
@@ -26,7 +26,8 @@
                               <a class="btn btn-outline-light w-100" href="javascript:;">
                                   <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink32">
-                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none"
+                                          fill-rule="evenodd">
                                           <g id="facebook-3" transform="translate(3.000000, 3.000000)"
                                               fill-rule="nonzero">
                                               <circle id="Oval" fill="#3C5A9A" cx="29.5091719" cy="29.4927506"
@@ -43,7 +44,8 @@
                               <a class="btn btn-outline-light w-100" href="javascript:;">
                                   <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none"
+                                          fill-rule="evenodd">
                                           <g id="apple-black" transform="translate(7.000000, 0.564551)" fill="#000000"
                                               fill-rule="nonzero">
                                               <path
@@ -58,7 +60,8 @@
                               <a class="btn btn-outline-light w-100" href="javascript:;">
                                   <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                      <g id="Artboard" stroke="none" stroke-width="1" fill="none"
+                                          fill-rule="evenodd">
                                           <g id="google-icon" transform="translate(3.000000, 2.000000)"
                                               fill-rule="nonzero">
                                               <path
@@ -88,19 +91,31 @@
                       <div class="card-body">
 
                           <form wire:submit.prevent="register" action="#" method="POST" role="form text-left">
+                              @if ($errors->any())
+                                  <div class="alert alert-primary" role="alert">
+                                      <strong>Whoops! Something went wrong.</strong> <br>
+                                      @foreach ($errors->all() as $error)
+                                          {{ $error }} <br>
+                                      @endforeach
+                                  </div>
+                              @endif
                               <div class="mb-3">
                                   <div class="@error('name') border border-danger rounded-3  @enderror">
-                                      <input wire:model="name" type="text" class="form-control" placeholder="Name"
-                                          aria-label="Name" aria-describedby="email-addon">
+                                      <input wire:model="name" type="text" class="form-control"
+                                          placeholder="Name" aria-label="Name" aria-describedby="email-addon">
                                   </div>
-                                  @error('name') <div class="text-danger">{{ $message }}</div> @enderror
+                                  @error('name')
+                                      <div class="text-danger">{{ $message }}</div>
+                                  @enderror
                               </div>
                               <div class="mb-3">
                                   <div class="@error('email') border border-danger rounded-3 @enderror">
-                                      <input wire:model="email" type="email" class="form-control" placeholder="Email"
-                                          aria-label="Email" aria-describedby="email-addon">
+                                      <input wire:model="email" type="email" class="form-control"
+                                          placeholder="Email" aria-label="Email" aria-describedby="email-addon">
                                   </div>
-                                  @error('email') <div class="text-danger">{{ $message }}</div> @enderror
+                                  @error('email')
+                                      <div class="text-danger">{{ $message }}</div>
+                                  @enderror
                               </div>
                               <div class="mb-3">
                                   <div class="@error('password') border border-danger rounded-3 @enderror">
@@ -108,16 +123,18 @@
                                           placeholder="Password" aria-label="Password"
                                           aria-describedby="password-addon">
                                   </div>
-                                  @error('password') <div class="text-danger">{{ $message }}</div> @enderror
+                                  @error('password')
+                                      <div class="text-danger">{{ $message }}</div>
+                                  @enderror
                               </div>
                               <div class="form-check form-check-info text-left">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                      checked>
+                                  <input class="form-check-input" type="checkbox" value=""
+                                      id="flexCheckDefault" checked>
                                   <label class="form-check-label" for="flexCheckDefault">
                                       {{ __('I agree the') }} <a href="javascript:;"
                                           class="text-dark font-weight-bolder">{{ __('Terms
-                                          and
-                                          Conditions') }}</a>
+                                                                                                                              and
+                                                                                                                              Conditions') }}</a>
                                   </label>
                               </div>
                               <div class="text-center">
