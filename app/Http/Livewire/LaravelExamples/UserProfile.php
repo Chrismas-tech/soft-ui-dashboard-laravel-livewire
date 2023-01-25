@@ -11,7 +11,7 @@ class UserProfile extends Component
     public $showSuccesNotification  = false;
 
     public $showDemoNotification = false;
-    
+
     protected $rules = [
         'user.name' => 'max:40|min:3',
         'user.email' => 'email:rfc,dns',
@@ -20,11 +20,11 @@ class UserProfile extends Component
         'user.location' => 'min:3'
     ];
 
-    public function mount() { 
+    public function mount() {
         $this->user = auth()->user();
     }
 
-    public function save() {
+    public function saveUserInfos() {
         if(env('IS_DEMO')) {
            $this->showDemoNotification = true;
         } else {
