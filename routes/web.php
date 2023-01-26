@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Livewire\Auth\ForgotPassword;
 use App\Http\Livewire\Auth\ResetPassword;
 use App\Http\Livewire\Auth\SignUp;
