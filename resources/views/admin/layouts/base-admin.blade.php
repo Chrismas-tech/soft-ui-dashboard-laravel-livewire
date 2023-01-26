@@ -24,8 +24,8 @@
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
-    @include('admin.layouts.navbars.auth.sidebar')
-    @include('admin.layouts.navbars.auth.nav')
+    @include('admin.layouts.sidebar-left')
+    @include('admin.layouts.navbar-right')
     @include('components.plugins.fixed-plugin')
     @yield('content')
     @include('admin.layouts.footer')
