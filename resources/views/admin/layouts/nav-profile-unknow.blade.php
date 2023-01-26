@@ -1,3 +1,4 @@
+<!-- Je ne sais pas où va cette navbar exactement -->
 <nav class="navbar navbar-main navbar-expand-lg bg-transparent shadow-none position-absolute px-4 w-100 z-index-2">
     <div class="container-fluid py-1">
         <nav aria-label="breadcrumb">
