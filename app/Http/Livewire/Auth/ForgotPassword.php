@@ -14,14 +14,14 @@ class ForgotPassword extends Component
 
     public $email = '';
 
-    public $showSuccesNotification = false; 
+    public $showSuccesNotification = false;
     public $showFailureNotification = false;
 
     public $showDemoNotification = false;
 
     protected $rules = [
         'email' => 'required|email',
-    ];  
+    ];
 
     public function mount() {
         if(auth()->user()){
@@ -33,7 +33,7 @@ class ForgotPassword extends Component
         return $this->email;
     }
 
-    public function recoverPassword() { 
+    public function recoverPassword() {
         if(env('IS_DEMO')) {
             $this->showDemoNotification = true;
         } else {
@@ -51,6 +51,6 @@ class ForgotPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.forgot-password')->layout('layouts.base');
+        return view('livewire.auth.forgot-password')->layout('auth.layouts.base');
     }
 }
