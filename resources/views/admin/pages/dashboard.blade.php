@@ -1,4 +1,9 @@
- <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+@extends('admin.layouts.base-admin')
+@section('title')
+Dashboard
+@endsection
+@section('content')
+{{-- <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -773,4 +778,5 @@
         },
       },
     });
-  </script>
+  </script> --}}
+@endsection
