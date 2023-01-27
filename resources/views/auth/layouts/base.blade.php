@@ -27,6 +27,7 @@
 
 <body class="g-sidenav-show bg-gray-100">
     {{ $slot }}
+    @include('auth.scripts.scripts-auth')
     @livewireScripts
 </body>
 

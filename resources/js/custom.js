@@ -1,4 +1,5 @@
 "use strict";
+import PerfectScrollbar from 'perfect-scrollbar';
 (function() {
   var isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 

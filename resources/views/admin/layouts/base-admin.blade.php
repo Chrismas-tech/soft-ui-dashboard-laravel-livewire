@@ -32,7 +32,7 @@
     @include('components.plugins.fixed-plugin')
     @yield('content')
     @include('admin.layouts.footer')
-    @include('admin.layouts.scripts.base-scripts')
+    {{-- @include('admin.layouts.scripts.scripts-admin') --}}
     @livewireScripts
 </body>
 
