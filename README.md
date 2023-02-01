@@ -16,10 +16,6 @@
 - php artisan serve
 - open : http://127.0.0.1:8000
 
-#### Source Links :
-- Jetstrap : https://github.com/nascent-africa/jetstrap
-- Laravel Actions : https://laravelactions.com/
-
 # [Soft UI Dashboard Laravel Livewire](https://soft-ui-dashboard-laravel-livewire.creative-tim.com/login)
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) 
